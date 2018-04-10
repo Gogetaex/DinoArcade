@@ -1,0 +1,351 @@
+#thumbnail {
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .3s;
+    width: 100%;
+}
+
+#thumbnail:hover {opacity: 0.7;}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    flex-direction:row;
+    justify-content: center;
+    align-items:center;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height */
+    background-color: rgb(255,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,.5); /* Black w/ opacity */
+}
+
+.modalPopup {
+  display: flex;
+  padding: 22px;
+  flex-direction: row;
+  justify-content: space-around;
+  z-index: 1;
+  width: 50%; /* Full width */
+  height: 400px; /* Full height */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,.9); /* Black w/ opacity */
+}
+
+.content
+{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalInformation{
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+  font-size: 26px;
+  /* width: 420px; */
+  width: 50%;
+  height: 360px;
+
+}
+
+
+.infoTitle
+{
+  font-size: 34px;
+  padding: 20px;
+}
+
+
+.infoSynop
+{
+  font-size: 18px;
+  padding: 20px;
+}
+
+
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* The Close Button */
+.close {
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    padding-bottom: 100px;
+    justify-content: flex-end;
+    float: right;
+    order: 3;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Caption of Modal Image */
+/* .infoTitle {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+    font-size: 65px;
+} */
+
+/* Add Animation */
+.modal-content, .modalPopup {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: .6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes zoom {
+    from {transform: scale(0.1)}
+    to {transform: scale(1)}
+}
+
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  justify-content: center;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 10px;
+  justify-content: center;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 960px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+    justify-content: center;
+  }
+  .row {
+    justify-content: center;
+  }
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+
+
+
+
+
+
+  .modal {
+      display: none; /* Hidden by default */
+      flex-direction:row;
+      justify-content: center;
+      align-items:center;
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100vh; /* Full height */
+      background-color: rgb(255,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,.5); /* Black w/ opacity */
+  }
+
+  .modalPopup {
+    display: flex;
+    padding: 22px;
+    flex-direction: row;
+    justify-content: space-around;
+    z-index: 1;
+    width: 50%; /* Full width */
+    height: 400px; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+  }
+
+  .content
+  {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modalInformation{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+    font-size: 26px;
+    /* width: 420px; */
+    width: 50%;
+    height: 360px;
+
+  }
+
+
+  .infoTitle
+  {
+    font-size: 38px;
+    padding: 20px;
+  }
+
+
+  .infoSynop
+  {
+    font-size: 18px;
+    padding: 20px;
+  }
+
+  /* Modal Content (image) */
+  .modal-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+  }
+
+  /* The Close Button */
+  .close {
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+      padding-bottom: 100px;
+      justify-content: flex-end;
+      float: right;
+      order: 3;
+  }
+
+  .close:hover,
+  .close:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+  }
+
+  /* Caption of Modal Image */
+  #caption {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+      text-align: center;
+      color: #ccc;
+      padding: 10px 0;
+      height: 150px;
+      font-size: 65px;
+  }
+
+  /* Add Animation */
+  .modal-content, #caption {
+      -webkit-animation-name: zoom;
+      -webkit-animation-duration: 0.6s;
+      animation-name: zoom;
+      animation-duration: 0.6s;
+  }
+
+  /* Tooltip container */
+  .tooltip {
+      position: relative;
+      display: inline-block;
+      border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  }
+
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 120px;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      padding: 5px 0;
+      border-radius: 6px;
+
+      /* Position the tooltip text - see examples below! */
+      position: absolute;
+      z-index: 1;
+      bottom: 100%;
+      left: 50%;
+      margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+  }
+
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+      visibility: visible;
+  }
+}
