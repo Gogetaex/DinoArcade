@@ -26,7 +26,7 @@ var vidUrls = ["https://www.youtube.com/embed/l_gWDl_f6V8","https://www.youtube.
 
 let vidObj = [
   {"title":"Arizona Sunshine", "video":"https://www.youtube.com/embed/l_gWDl_f6V8", "synop":"I could never find the right way to tell you, have you noticed I've been gone, 'cause I left behind the home that you made me but I will carry it along. And it's a long way forward, so trust in me, I'll give them shelter like you've done for me, and I know, I'm not, alone, you'll be watchin' over us until you're gone."},
-  {"title":"Bullets and More", "video":"https://www.youtube.com/embed/ev7M8PycSYs", "synop":"Long time no, see I know, what'cha got on your plate today, do you want to run away. We'll make it, no breakin', awake and ready to escape, no stoppin' 'til all the way. Don't count me out, chasin' disaster, I'm goin' faster, free, my feet, I'll be unleashed. Keep ya there, I'll dare ya to come through, in the air, we'll dance like we used to, nanananana, nanananana, ya givin' me a little mania, in a dance, we'll crash down the party, I can taste the race of your heart beat, nananana, nanananana, you're givin' me a little mania."},
+  {"title":"Bullets and More", "video":"https://www.youtube.com/embed/ev7M8PycSYs", "synop":"Long time no, see I know, what'cha got on your plate today, do you want to run away. We'll make it, no breakin', awake and ready to escape, no stoppin' 'til all the way. Don't count me out, chasin' disaster, I'm goin' faster, free, my feet, I'll be unleashed. Keep ya there, I'll dare ya to come through, in the air, we'll dance like we used to, nanananana, nanananana, ya givin' me a little mania, in a dance, we'll crash down the party, I can taste the race of your heart beat, nananana, nanananana, you're givin' me a little mania.Long time no, see I know, what'cha got on your plate today, do you want to run away. We'll make it, no breakin', awake and ready to escape, no stoppin' 'til all the way. Don't count me out, chasin' disaster, I'm goin' faster, free, my feet, I'll be unleashed. Keep ya there, I'll dare ya to come through, in the air, we'll dance like we used to, nanananana, nanananana, ya givin' me a little mania, in a dance, we'll crash down the party, I can taste the race of your heart beat, nananana, nanananana, you're givin' me a little mania."},
   {"title":"Blasters of the Universe", "video":"https://www.youtube.com/embed/u6dhNTorxuM", "synop":"Welcome to the Jungle, we've got fun and games, we've got everything you want, honey we know the names, we are the people that can find whatever you may need, if you want the money, honey, we've got your disease in the jungle, welcome to the jungle, watch me bring to your knees, knees."},
   {"title":"Crowe: the Drowned Armory", "video":"https://www.youtube.com/embed/wC1Lx9JPVi8", "synop":"Placeholder for Crow"},
   {"title":"The Iota Project", "video":"https://www.youtube.com/embed/d41K3wTVrNk", "synop":"Placeholder for Iota"},
@@ -49,14 +49,9 @@ let vidObj = [
 
 function showVideo(x)
 {
-  modal.innerHTML='<div class="modalPopup"><span class="close" onclick="closeModal()">X</span><div class="content"><object id="video" width="420" height="315" data="'+vidObj[x].video+'"></object><div class="modalInformation"><div class="infoTitle">'+vidObj[x].title+'</div><div class="infoSynop">'+vidObj[x].synop+'</div></div></div>';
+  modal.innerHTML='<div class="modalPopup"><span class="close" onclick="closeModal()">X</span><div class="content"><div class="infoTitle">'+vidObj[x].title+'</div><div class="vidSyn"><object id="video" width="420" height="315" data="'+vidObj[x].video+'"></object><div class="infoSynop">'+vidObj[x].synop+'</div></div></div></div></div>';
   modal.style.display = "flex";
 }
-
-modal.innerHTML='<div class="modalPopup"><span class="close" onclick="closeModal()">X</span><div class="content"><object id="video" width="420" height="315" data="'
-+vidObj[x].video+'"></object><div class="modalInformation"><div class="infoTitle">'+vidObj[x].title+
-'</div><div class="infoSynop">'+vidObj[x].synop+'</div></div></div>';
-modal.style.display = "flex";
 
 
 document.getElementById("modal").textContent = 'Arizona Sunshine';
